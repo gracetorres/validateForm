@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <script src="js.js"></script>
+    <fieldset>
+        <input type="text " id="nombreUsuario">
+        <button onclick="eliminarUsuario()"> Eliminar</button>
+    </fieldset>
+    <br>
+    <fieldset>
+        <input placeholder= 'Escriba aqui el usuario' type="text " id="nombre">
+        <input placeholder= 'Escriba aqui la contraseña' type="password" id="contrasena">
+        <input placeholder= 'Escriba aqui el nombre' type="text " id="nombreCompleto">
+        <button onclick="agregarUsuario()"> Agregar</button>
+    </fieldset>
+    <fieldset>
+        <input placeholder= 'Busca aqui el usuario' type="text " id="buscarUsuario">
+        <button onclick="buscarUsuario()"> Buscar</button>
+        <br>
+        <br>
+        <div id="contenedor" style="display:none">
+            <input placeholder= 'Escriba aqui el usuario' type="text " id="nombreActualizar">
+            <input placeholder= 'Escriba aqui la contraseña' type="password" id="contrasenaActualizar">
+            <input placeholder= 'Escriba aqui el nombre' type="text " id="nombreCompletoActualizar">
+            <button onclick="ActualizarUsuario()"> Actualizar</button>
+        </div>
+
+
+        
+       
+    </fieldset>
+
+
+    <div class="caja">
+        <div class="rojo m-t-10">
+            
+        </div>
+        <div class="amarillo m-t-10">
+            
+        </div>
+        <div class="verde m-t-10 m-b-10">
+            
+        </div>
+    
+    </div>
+<br>
+
+    <div class="caja">
+        <div class="rojo m-t-10" id="rojo" >
+            
+        </div>
+        <div class="amarillo m-t-10 opacidad" id="amarillo">
+            
+        </div>
+        <div class="verde m-t-10 m-b-10 opacidad" id="verde">
+            
+        </div>
+    
+    </div>
+
+
+
+    <button onclick="cambiarVerde() ">
+        Cambiar a verde
+    </button>
+
+    <button onclick="cambiarAmarillo() ">
+        Cambiar a Amarillo
+    </button>
+
+    <button onclick="cambiarRojo() ">
+        Cambiar a Rojo
+    </button>
+    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <div class="c flex-row ">
+ 
+        <div class="contenedor m-l-500">
+            <div class="titulos">
+                <div class="flex-row align-items flex-between">
+                    <div class="sign-up">
+                        Registrate            
+                    </div>
+                    <div class="x">
+                        X
+                    </div>
+                </div>
+                
+                <div class="sub-2">
+                    Es rápido y fácil.
+                </div>
+                <div class="borrr ">
+                   
+                </div>
+
+            </div>
+            
+            <form id="form" >
+                <div id="formulario" class="flex-column" >
+                    <div class="flex-row flex-between ">
+                        <input type="text" placeholder="Nombre" id="inputNombre" class="inputs  silver m-r-10">
+                        <input type="text" placeholder="Apellidos" id="inputApellido" class="inputs silver">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Número de célular o correo electronico" id="inputCorreoElectrónico" class="inputs silver m-t-10">
+                    </div>
+                    <div>
+                        <input type="password" placeholder="contraseña" id="inputContraseña" class="inputs silver m-t-10">
+                    </div>              
+                </div>
+            </form>
+    
+            <div class="segundoForm m-t-20">
+                <div>
+                    <div class="flex-column ">                   
+                         <label class="titulo-pequeño">
+                            Fecha de Nacimiento
+                         </label>
+                                 
+                        <div class="flex-row">
+                            <select id="selectFechas" class="inputs m-r-10 ">
+                                <option value=""></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+    
+                            <select id="selectMeses" class="inputs m-r-10">
+                                <option value=""></option>
+                                <option value="1">ene</option>
+                                <option value="2">feb</option>
+                                <option value="3">mar</option>
+                                <option value="4">abr</option>
+                                <option value="5">may</option>
+                                <option value="6">jun</option>
+                                <option value="7">jul</option>
+                                <option value="8">ago</option>
+                                <option value="9">set</option>
+                                <option value="10">oct</option>
+                                <option value="11">nov</option>
+                                <option value="12">dic</option>
+    
+                            </select>
+                            <select id="selectAnos" class="inputs">
+                                <option value=""></option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="m-t-20 flex-column">                   
+                        <label class="titulo-pequeño">
+                            Sexo
+                        </label>
+                        
+                        <div class="flex-row ">
+                            <div id="divMujer" class="inputs m-r-20 flex-row flex-between">
+                                Mujer <input id="mujer" type="radio" value="1" name="genero" > 
+                            </div>
+                            <div id="divHombre" class="inputs flex-row flex-between">
+                                Hombre <input id="hombre" type="radio" value="2" name="genero">
+                            </div>
+                            
+                        </div>                    
+                    </div>
+                    
+                </div>
+    
+            </div>
+    
+            <div class="noImportante m-t-20">
+                Al hacer clic en "Registrarte", aceptas nuestras condiciones, la Política de datos y la Política de cookies. Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras.
+            </div>
+    
+            <div class="m-t-20 flex-row justify-content m-b-20 ">
+                <button onclick="botonRegistrar()"  class="boton" >Registrate</button>
+            </div>
+    
+    
+        </div>
+        <div class="cont flex-column m-l-150 ">
+            <div class="sign-up flex-column">
+                Listado de  tareas
+            </div>
+            <div class="sub-2 flex-column">
+                <div>
+                    -validar cada input
+                </div>
+                <div>
+                    -añadir un borde rojo a los inputs 
+                </div>
+                <div>
+                    -alinear registrarse con la X
+                </div>
+                <div>
+                    -Que el borde del titulo este completo con el cuadro
+                </div>
+                <div>
+                    -agregar la informacion del formulario a un array.
+                </div>
+                <div>
+                    -validar si el usuario ya ha sido registrado por el correo y mostrar una alerta               
+                </div>
+               
+            </div>
+            
+            
+        </div>
+    </div>
+   
+</body>
+</html>
+
+
